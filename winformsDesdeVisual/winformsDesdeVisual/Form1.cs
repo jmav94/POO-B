@@ -22,7 +22,7 @@ namespace winformsDesdeVisual
             dgEmpleados.Columns.Add("Nombre", "Nombre");
             dgEmpleados.Columns.Add("Sueldo", "Sueldo");
             dgEmpleados.Columns["Sueldo"].DefaultCellStyle.Format = "C";
-
+            // Esta parte se encarga de crear renglones desde que se carga la forma
             dgEmpleados.Rows.Add(1, "Juan", 100.00);
             dgEmpleados.Rows.Add(2, "Abraham", 200.00);
             dgEmpleados.Rows.Add(3, "Rodrigo", 300.00);
