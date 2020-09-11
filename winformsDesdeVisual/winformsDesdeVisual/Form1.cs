@@ -155,7 +155,7 @@ namespace winformsDesdeVisual
                     salida = salida + dgEmpleados[c, r].Value + "\t";
             }*/
             
-
+            // Recorrido de datagridview con foreach
             foreach (DataGridViewRow renglon in dgEmpleados.Rows)
             {
                 if (renglon.Cells["Numero"] != null)
