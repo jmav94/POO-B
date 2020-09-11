@@ -22,5 +22,10 @@ namespace winformsDesdeVisual
             //Cierra la forma
             Close();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            txtContrasena.PasswordChar = '*';
+        }
     }
 }
