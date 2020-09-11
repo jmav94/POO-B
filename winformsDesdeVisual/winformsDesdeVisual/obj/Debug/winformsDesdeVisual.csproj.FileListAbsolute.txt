@@ -1,0 +1,10 @@
+C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\bin\Debug\winformsDesdeVisual.exe.config
+C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\bin\Debug\winformsDesdeVisual.exe
+C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\bin\Debug\winformsDesdeVisual.pdb
+C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.csprojAssemblyReference.cache
+C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.Form1.resources
+C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.Properties.Resources.resources
+C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.csproj.GenerateResource.cache
+C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.csproj.CoreCompileInputs.cache
+C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.exe
+C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.pdb
