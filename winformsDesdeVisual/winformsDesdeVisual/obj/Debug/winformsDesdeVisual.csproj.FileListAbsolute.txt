@@ -18,3 +18,4 @@ D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\w
 D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.csproj.CoreCompileInputs.cache
 D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.exe
 D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.pdb
+D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.Form2.resources

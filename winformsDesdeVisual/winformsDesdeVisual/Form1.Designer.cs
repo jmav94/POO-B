@@ -52,6 +52,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnAgregarEmpleado = new System.Windows.Forms.Button();
             this.btnRecorrerDg = new System.Windows.Forms.Button();
+            this.btnAbrirForma = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgEmpleados)).BeginInit();
@@ -285,11 +286,22 @@
             this.btnRecorrerDg.UseVisualStyleBackColor = true;
             this.btnRecorrerDg.Click += new System.EventHandler(this.btnRecorrerDg_Click);
             // 
+            // btnAbrirForma
+            // 
+            this.btnAbrirForma.Location = new System.Drawing.Point(699, 266);
+            this.btnAbrirForma.Name = "btnAbrirForma";
+            this.btnAbrirForma.Size = new System.Drawing.Size(75, 23);
+            this.btnAbrirForma.TabIndex = 20;
+            this.btnAbrirForma.Text = "Abrir Forma";
+            this.btnAbrirForma.UseVisualStyleBackColor = true;
+            this.btnAbrirForma.Click += new System.EventHandler(this.btnAbrirForma_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 354);
+            this.Controls.Add(this.btnAbrirForma);
             this.Controls.Add(this.btnRecorrerDg);
             this.Controls.Add(this.btnAgregarEmpleado);
             this.Controls.Add(this.label4);
@@ -341,6 +353,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAgregarEmpleado;
         private System.Windows.Forms.Button btnRecorrerDg;
+        private System.Windows.Forms.Button btnAbrirForma;
     }
 }
 

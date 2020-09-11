@@ -180,5 +180,13 @@ namespace winformsDesdeVisual
                 btnAgregar.PerformClick();
             }
         }
+
+        private void btnAbrirForma_Click(object sender, EventArgs e)
+        {
+            // Crea el objeto de la nueva forma
+            Form2 miForma2 = new Form2();
+            // Muestra la forma
+            miForma2.Show();
+        }
     }
 }
