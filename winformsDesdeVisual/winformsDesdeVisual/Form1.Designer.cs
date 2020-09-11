@@ -158,6 +158,7 @@
             this.txtPlatillo.Size = new System.Drawing.Size(100, 20);
             this.txtPlatillo.TabIndex = 10;
             this.txtPlatillo.TextChanged += new System.EventHandler(this.txtPlatillo_TextChanged);
+            this.txtPlatillo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlatillo_KeyPress_1);
             // 
             // btnRecorrer
             // 

@@ -172,5 +172,13 @@ namespace winformsDesdeVisual
             TimeSpan intervalo = dtmHoraSalida - dtmHoraEntrada;
             MessageBox.Show($"{salida}\nIntervalo de tiempo transcurrido durante el recorrido: {intervalo}");
         }
+
+        private void txtPlatillo_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnAgregar.PerformClick();
+            }
+        }
     }
 }

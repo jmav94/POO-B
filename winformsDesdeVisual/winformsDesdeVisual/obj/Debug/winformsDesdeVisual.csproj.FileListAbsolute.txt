@@ -8,3 +8,13 @@ C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\wi
 C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.csproj.CoreCompileInputs.cache
 C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.exe
 C:\Users\juanm\source\repos\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.pdb
+D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\bin\Debug\winformsDesdeVisual.exe.config
+D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\bin\Debug\winformsDesdeVisual.exe
+D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\bin\Debug\winformsDesdeVisual.pdb
+D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.csprojAssemblyReference.cache
+D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.Form1.resources
+D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.Properties.Resources.resources
+D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.csproj.GenerateResource.cache
+D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.csproj.CoreCompileInputs.cache
+D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.exe
+D:\dev\c#\windowsforms\POO-B\winformsDesdeVisual\winformsDesdeVisual\obj\Debug\winformsDesdeVisual.pdb
