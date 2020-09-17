@@ -1,0 +1,10 @@
+D:\dev\c#\windowsforms\POO-B\Ejercicio-Escuela\Ejercicio-Escuela\bin\Debug\Ejercicio-Escuela.exe.config
+D:\dev\c#\windowsforms\POO-B\Ejercicio-Escuela\Ejercicio-Escuela\bin\Debug\Ejercicio-Escuela.exe
+D:\dev\c#\windowsforms\POO-B\Ejercicio-Escuela\Ejercicio-Escuela\bin\Debug\Ejercicio-Escuela.pdb
+D:\dev\c#\windowsforms\POO-B\Ejercicio-Escuela\Ejercicio-Escuela\obj\Debug\Ejercicio-Escuela.csprojAssemblyReference.cache
+D:\dev\c#\windowsforms\POO-B\Ejercicio-Escuela\Ejercicio-Escuela\obj\Debug\Ejercicio_Escuela.Form1.resources
+D:\dev\c#\windowsforms\POO-B\Ejercicio-Escuela\Ejercicio-Escuela\obj\Debug\Ejercicio_Escuela.Properties.Resources.resources
+D:\dev\c#\windowsforms\POO-B\Ejercicio-Escuela\Ejercicio-Escuela\obj\Debug\Ejercicio-Escuela.csproj.GenerateResource.cache
+D:\dev\c#\windowsforms\POO-B\Ejercicio-Escuela\Ejercicio-Escuela\obj\Debug\Ejercicio-Escuela.csproj.CoreCompileInputs.cache
+D:\dev\c#\windowsforms\POO-B\Ejercicio-Escuela\Ejercicio-Escuela\obj\Debug\Ejercicio-Escuela.exe
+D:\dev\c#\windowsforms\POO-B\Ejercicio-Escuela\Ejercicio-Escuela\obj\Debug\Ejercicio-Escuela.pdb
