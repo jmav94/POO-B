@@ -1,0 +1,10 @@
+D:\dev\c#\windowsforms\POO-B\EjercicioMetodoClaseBase\EjercicioMetodoClaseBase\bin\Debug\EjercicioMetodoClaseBase.exe.config
+D:\dev\c#\windowsforms\POO-B\EjercicioMetodoClaseBase\EjercicioMetodoClaseBase\bin\Debug\EjercicioMetodoClaseBase.exe
+D:\dev\c#\windowsforms\POO-B\EjercicioMetodoClaseBase\EjercicioMetodoClaseBase\bin\Debug\EjercicioMetodoClaseBase.pdb
+D:\dev\c#\windowsforms\POO-B\EjercicioMetodoClaseBase\EjercicioMetodoClaseBase\obj\Debug\EjercicioMetodoClaseBase.csprojAssemblyReference.cache
+D:\dev\c#\windowsforms\POO-B\EjercicioMetodoClaseBase\EjercicioMetodoClaseBase\obj\Debug\EjercicioMetodoClaseBase.Form1.resources
+D:\dev\c#\windowsforms\POO-B\EjercicioMetodoClaseBase\EjercicioMetodoClaseBase\obj\Debug\EjercicioMetodoClaseBase.Properties.Resources.resources
+D:\dev\c#\windowsforms\POO-B\EjercicioMetodoClaseBase\EjercicioMetodoClaseBase\obj\Debug\EjercicioMetodoClaseBase.csproj.GenerateResource.cache
+D:\dev\c#\windowsforms\POO-B\EjercicioMetodoClaseBase\EjercicioMetodoClaseBase\obj\Debug\EjercicioMetodoClaseBase.csproj.CoreCompileInputs.cache
+D:\dev\c#\windowsforms\POO-B\EjercicioMetodoClaseBase\EjercicioMetodoClaseBase\obj\Debug\EjercicioMetodoClaseBase.exe
+D:\dev\c#\windowsforms\POO-B\EjercicioMetodoClaseBase\EjercicioMetodoClaseBase\obj\Debug\EjercicioMetodoClaseBase.pdb
