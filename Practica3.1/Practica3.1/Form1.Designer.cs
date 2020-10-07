@@ -36,9 +36,9 @@
             // 
             this.btn1.Location = new System.Drawing.Point(32, 25);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(99, 52);
+            this.btn1.Size = new System.Drawing.Size(120, 52);
             this.btn1.TabIndex = 0;
-            this.btn1.Text = "Ejercicio 1";
+            this.btn1.Text = "Ejercicio 1 - 4";
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 

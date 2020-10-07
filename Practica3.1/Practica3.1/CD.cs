@@ -15,5 +15,9 @@ namespace Practica3._1
             get { return _dblTiempo; }
             set { _dblTiempo = value; }
         }
+        public override string ToString()
+        {
+            return $"{base.ToString()} \nTiempo de reproduccion: {Tiempo}";
+        }
     }
 }

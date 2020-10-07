@@ -13,7 +13,8 @@ namespace Practica3._1
     public partial class frmEj1 : Form
     {
         Libro unLibro;
-        CD unCD; 
+        CD unCD;
+        //Publicacion unaPublicacion = new Publicacion();
         public frmEj1()
         {
             InitializeComponent();
@@ -25,6 +26,8 @@ namespace Practica3._1
             {
                 txtPaginas.Enabled = true;
                 txtTiempo.Enabled = false;
+                lbVentasCD.Visible = false;
+                lbVentasLibro.Visible = true;
             }
         }
 
@@ -34,6 +37,8 @@ namespace Practica3._1
             {
                 txtPaginas.Enabled = false;
                 txtTiempo.Enabled = true;
+                lbVentasCD.Visible = true;
+                lbVentasLibro.Visible = false;
             }
         }
 
@@ -62,23 +67,45 @@ namespace Practica3._1
         {
             txtPaginas.Enabled = false;
             txtTiempo.Enabled = false;
+            lbVentasCD.Visible = false;
+            lbVentasLibro.Visible = false;
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             if (rdbLibro.Checked)
             {
-                MessageBox.Show($"Titulo: {unLibro.Titulo} \nPrecio: {unLibro.Precio} \nNum.Paginas: {unLibro.Paginas}", "Libro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                for (int i = 0; i < 3; i++)
+                {
+                    unLibro[i] = double.Parse(lbVentasLibro.Items[i].ToString());
+                }
+                MessageBox.Show(unLibro.ToString(), "Libro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             if (rdbAudio.Checked)
             {
-                MessageBox.Show($"Titulo: {unCD.Titulo} \nPrecio: {unCD.Precio} \nNum.Paginas: {unCD.Tiempo}","CD", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                for (int i = 0; i < 3; i++)
+                {
+                    unCD[i] = double.Parse(lbVentasCD.Items[i].ToString());
+                }
+                MessageBox.Show(unCD.ToString(),"CD", MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnCapturarVenta_Click(object sender, EventArgs e)
+        {
+            if (rdbLibro.Checked)
+            {
+                lbVentasLibro.Items.Add(txtVenta.Text);
+            }
+            if (rdbAudio.Checked)
+            {
+                lbVentasCD.Items.Add(txtVenta.Text);
+            }
         }
     }
 }

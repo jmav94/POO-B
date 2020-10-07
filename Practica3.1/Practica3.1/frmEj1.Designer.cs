@@ -43,6 +43,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTiempo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.lbVentasLibro = new System.Windows.Forms.ListBox();
+            this.txtVenta = new System.Windows.Forms.TextBox();
+            this.btnCapturarVenta = new System.Windows.Forms.Button();
+            this.lbVentasCD = new System.Windows.Forms.ListBox();
             this.gpbTipo.SuspendLayout();
             this.gpbDatos.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +81,7 @@
             // 
             // btnCapturar
             // 
-            this.btnCapturar.Location = new System.Drawing.Point(287, 69);
+            this.btnCapturar.Location = new System.Drawing.Point(314, 157);
             this.btnCapturar.Name = "btnCapturar";
             this.btnCapturar.Size = new System.Drawing.Size(75, 51);
             this.btnCapturar.TabIndex = 0;
@@ -87,7 +91,7 @@
             // 
             // btnMostrar
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(287, 139);
+            this.btnMostrar.Location = new System.Drawing.Point(314, 229);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(75, 45);
             this.btnMostrar.TabIndex = 2;
@@ -97,7 +101,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(287, 202);
+            this.btnSalir.Location = new System.Drawing.Point(314, 300);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 3;
@@ -193,11 +197,50 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Tiempo (minutos)";
             // 
+            // lbVentasLibro
+            // 
+            this.lbVentasLibro.FormattingEnabled = true;
+            this.lbVentasLibro.ItemHeight = 16;
+            this.lbVentasLibro.Location = new System.Drawing.Point(208, 43);
+            this.lbVentasLibro.Name = "lbVentasLibro";
+            this.lbVentasLibro.Size = new System.Drawing.Size(181, 84);
+            this.lbVentasLibro.TabIndex = 4;
+            // 
+            // txtVenta
+            // 
+            this.txtVenta.Location = new System.Drawing.Point(208, 12);
+            this.txtVenta.Name = "txtVenta";
+            this.txtVenta.Size = new System.Drawing.Size(64, 22);
+            this.txtVenta.TabIndex = 5;
+            // 
+            // btnCapturarVenta
+            // 
+            this.btnCapturarVenta.Location = new System.Drawing.Point(278, 12);
+            this.btnCapturarVenta.Name = "btnCapturarVenta";
+            this.btnCapturarVenta.Size = new System.Drawing.Size(111, 23);
+            this.btnCapturarVenta.TabIndex = 6;
+            this.btnCapturarVenta.Text = "Capturar";
+            this.btnCapturarVenta.UseVisualStyleBackColor = true;
+            this.btnCapturarVenta.Click += new System.EventHandler(this.btnCapturarVenta_Click);
+            // 
+            // lbVentasCD
+            // 
+            this.lbVentasCD.FormattingEnabled = true;
+            this.lbVentasCD.ItemHeight = 16;
+            this.lbVentasCD.Location = new System.Drawing.Point(208, 43);
+            this.lbVentasCD.Name = "lbVentasCD";
+            this.lbVentasCD.Size = new System.Drawing.Size(181, 84);
+            this.lbVentasCD.TabIndex = 7;
+            // 
             // frmEj1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 353);
+            this.ClientSize = new System.Drawing.Size(434, 353);
+            this.Controls.Add(this.lbVentasCD);
+            this.Controls.Add(this.btnCapturarVenta);
+            this.Controls.Add(this.txtVenta);
+            this.Controls.Add(this.lbVentasLibro);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnCapturar);
@@ -211,6 +254,7 @@
             this.gpbDatos.ResumeLayout(false);
             this.gpbDatos.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -231,5 +275,9 @@
         private System.Windows.Forms.Button btnCapturar;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ListBox lbVentasLibro;
+        private System.Windows.Forms.TextBox txtVenta;
+        private System.Windows.Forms.Button btnCapturarVenta;
+        private System.Windows.Forms.ListBox lbVentasCD;
     }
 }

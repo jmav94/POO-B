@@ -15,6 +15,10 @@ namespace Practica3._1
             get { return _intPaginas; }
             set { _intPaginas = value; }
         }
-
+        public override string ToString()
+        {
+            return $"{base.ToString()} \nNum. Paginas: {Paginas}";
+            //return base.ToString() +"\nNum. Paginas: "+ Paginas;
+        }
     }
 }
