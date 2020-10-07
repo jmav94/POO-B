@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.gbPersona = new System.Windows.Forms.GroupBox();
+            this.rdbEstudiante = new System.Windows.Forms.RadioButton();
+            this.rdbProfesor = new System.Windows.Forms.RadioButton();
             this.btnCapturar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.gbDatos = new System.Windows.Forms.GroupBox();
-            this.rdbProfesor = new System.Windows.Forms.RadioButton();
-            this.rdbEstudiante = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtSueldo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtCalificacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtSueldo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbPersona.SuspendLayout();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
@@ -55,12 +55,36 @@
             this.gbPersona.TabStop = false;
             this.gbPersona.Text = "Tipo de persona";
             // 
+            // rdbEstudiante
+            // 
+            this.rdbEstudiante.AutoSize = true;
+            this.rdbEstudiante.Location = new System.Drawing.Point(32, 60);
+            this.rdbEstudiante.Name = "rdbEstudiante";
+            this.rdbEstudiante.Size = new System.Drawing.Size(75, 17);
+            this.rdbEstudiante.TabIndex = 2;
+            this.rdbEstudiante.TabStop = true;
+            this.rdbEstudiante.Text = "Estudiante";
+            this.rdbEstudiante.UseVisualStyleBackColor = true;
+            this.rdbEstudiante.CheckedChanged += new System.EventHandler(this.rdbEstudiante_CheckedChanged);
+            // 
+            // rdbProfesor
+            // 
+            this.rdbProfesor.AutoSize = true;
+            this.rdbProfesor.Location = new System.Drawing.Point(32, 26);
+            this.rdbProfesor.Name = "rdbProfesor";
+            this.rdbProfesor.Size = new System.Drawing.Size(64, 17);
+            this.rdbProfesor.TabIndex = 1;
+            this.rdbProfesor.TabStop = true;
+            this.rdbProfesor.Text = "Profesor";
+            this.rdbProfesor.UseVisualStyleBackColor = true;
+            this.rdbProfesor.CheckedChanged += new System.EventHandler(this.rdbProfesor_CheckedChanged);
+            // 
             // btnCapturar
             // 
             this.btnCapturar.Location = new System.Drawing.Point(199, 40);
             this.btnCapturar.Name = "btnCapturar";
             this.btnCapturar.Size = new System.Drawing.Size(75, 35);
-            this.btnCapturar.TabIndex = 0;
+            this.btnCapturar.TabIndex = 6;
             this.btnCapturar.TabStop = false;
             this.btnCapturar.Text = "Capturar Datos";
             this.btnCapturar.UseVisualStyleBackColor = true;
@@ -71,7 +95,7 @@
             this.btnMostrar.Location = new System.Drawing.Point(199, 92);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(75, 40);
-            this.btnMostrar.TabIndex = 1;
+            this.btnMostrar.TabIndex = 7;
             this.btnMostrar.Text = "Mostrar Datos";
             this.btnMostrar.UseVisualStyleBackColor = true;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
@@ -91,52 +115,28 @@
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos de la persona";
             // 
-            // rdbProfesor
+            // txtCalificacion
             // 
-            this.rdbProfesor.AutoSize = true;
-            this.rdbProfesor.Location = new System.Drawing.Point(32, 26);
-            this.rdbProfesor.Name = "rdbProfesor";
-            this.rdbProfesor.Size = new System.Drawing.Size(64, 17);
-            this.rdbProfesor.TabIndex = 2;
-            this.rdbProfesor.TabStop = true;
-            this.rdbProfesor.Text = "Profesor";
-            this.rdbProfesor.UseVisualStyleBackColor = true;
-            this.rdbProfesor.CheckedChanged += new System.EventHandler(this.rdbProfesor_CheckedChanged);
+            this.txtCalificacion.Location = new System.Drawing.Point(100, 102);
+            this.txtCalificacion.Name = "txtCalificacion";
+            this.txtCalificacion.Size = new System.Drawing.Size(100, 20);
+            this.txtCalificacion.TabIndex = 5;
             // 
-            // rdbEstudiante
+            // label3
             // 
-            this.rdbEstudiante.AutoSize = true;
-            this.rdbEstudiante.Location = new System.Drawing.Point(32, 60);
-            this.rdbEstudiante.Name = "rdbEstudiante";
-            this.rdbEstudiante.Size = new System.Drawing.Size(75, 17);
-            this.rdbEstudiante.TabIndex = 3;
-            this.rdbEstudiante.TabStop = true;
-            this.rdbEstudiante.Text = "Estudiante";
-            this.rdbEstudiante.UseVisualStyleBackColor = true;
-            this.rdbEstudiante.CheckedChanged += new System.EventHandler(this.rdbEstudiante_CheckedChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Nombre : ";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(100, 32);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 5;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Calificacion : ";
             // 
             // txtSueldo
             // 
             this.txtSueldo.Location = new System.Drawing.Point(100, 69);
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(100, 20);
-            this.txtSueldo.TabIndex = 7;
+            this.txtSueldo.TabIndex = 4;
             // 
             // label2
             // 
@@ -147,21 +147,21 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Sueldo : ";
             // 
-            // txtCalificacion
+            // txtNombre
             // 
-            this.txtCalificacion.Location = new System.Drawing.Point(100, 102);
-            this.txtCalificacion.Name = "txtCalificacion";
-            this.txtCalificacion.Size = new System.Drawing.Size(100, 20);
-            this.txtCalificacion.TabIndex = 9;
+            this.txtNombre.Location = new System.Drawing.Point(100, 32);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 3;
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Calificacion : ";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nombre : ";
             // 
             // Form1
             // 

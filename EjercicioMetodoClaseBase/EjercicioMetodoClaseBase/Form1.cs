@@ -31,18 +31,10 @@ namespace EjercicioMetodoClaseBase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            unCliente = new Cliente();
-            unCliente.Nombre = txtNombre.Text;
-            unCliente.FechaNacimiento = dtpFechaNacimiento.Value;
-            if (unCliente.EsMayorDeEdad())
-            {
-                MessageBox.Show($"{unCliente.Nombre} tiene {unCliente.CalcularEdad()} y es mayor de Edad");
-            }
-            else
-            {
-                MessageBox.Show($"{unCliente.Nombre} tiene {unCliente.CalcularEdad()} y no es mayor de Edad");
-            }
-
+            Cliente unCliente = new Cliente(txtNombre.Text,dtpFechaNacimiento.Value, double.Parse(txtLimite.Text));
+            
+            MessageBox.Show(unCliente.ToString());
+            //Console.WriteLine(unCliente);
         }
     }
 }

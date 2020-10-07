@@ -1,0 +1,11 @@
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\bin\Debug\Practica3.1.exe.config
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\bin\Debug\Practica3.1.exe
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\bin\Debug\Practica3.1.pdb
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3.1.csprojAssemblyReference.cache
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3._1.Form1.resources
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3._1.frmEj1.resources
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3._1.Properties.Resources.resources
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3.1.csproj.GenerateResource.cache
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3.1.csproj.CoreCompileInputs.cache
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3.1.exe
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3.1.pdb

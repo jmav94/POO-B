@@ -9,6 +9,14 @@ namespace EjercicioMetodoClaseBase
 {
     class Persona
     {
+        // Metodo constructor que recibe parametros y los asgina a los atributos. 
+        // Esto es que desde la creacion del objeto le damos valor a sus atributos.
+        public Persona(string strNombre, DateTime dtmFechaNacimiento)
+        {
+            _strNombre = strNombre;
+            _dtmFechaNacimiento = dtmFechaNacimiento;
+        }
+
         private string _strNombre;
 
         public string Nombre
@@ -31,6 +39,5 @@ namespace EjercicioMetodoClaseBase
             intEdad = (int)(intervalo.Days / 365.25);
             return intEdad;
         }
-
     }
 }

@@ -35,6 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFechaActual = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtLimite = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(70, 75);
+            this.label2.Location = new System.Drawing.Point(81, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 13);
             this.label2.TabIndex = 2;
@@ -64,7 +66,7 @@
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(26, 101);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(37, 134);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaNacimiento.TabIndex = 3;
@@ -72,7 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 134);
+            this.label3.Location = new System.Drawing.Point(94, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 4;
@@ -80,7 +82,7 @@
             // 
             // dtpFechaActual
             // 
-            this.dtpFechaActual.Location = new System.Drawing.Point(26, 161);
+            this.dtpFechaActual.Location = new System.Drawing.Point(37, 194);
             this.dtpFechaActual.Name = "dtpFechaActual";
             this.dtpFechaActual.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaActual.TabIndex = 5;
@@ -88,7 +90,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(84, 187);
+            this.button1.Location = new System.Drawing.Point(95, 220);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 39);
             this.button1.TabIndex = 6;
@@ -96,11 +98,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtLimite
+            // 
+            this.txtLimite.Location = new System.Drawing.Point(135, 71);
+            this.txtLimite.Name = "txtLimite";
+            this.txtLimite.Size = new System.Drawing.Size(60, 20);
+            this.txtLimite.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(45, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Limite de Credito : ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 238);
+            this.ClientSize = new System.Drawing.Size(263, 275);
+            this.Controls.Add(this.txtLimite);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtpFechaActual);
             this.Controls.Add(this.label3);
@@ -125,6 +145,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpFechaActual;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtLimite;
+        private System.Windows.Forms.Label label4;
     }
 }
 
