@@ -60,7 +60,7 @@ namespace Practica3._1
             }
             foreach (Control x in gpbDatos.Controls)
                 if (x is TextBox)
-                    x.Text ="";
+                    x.Text = "";
         }
 
         private void frmEj1_Load(object sender, EventArgs e)
@@ -106,6 +106,7 @@ namespace Practica3._1
             {
                 lbVentasCD.Items.Add(txtVenta.Text);
             }
+            txtVenta.Clear();
         }
     }
 }

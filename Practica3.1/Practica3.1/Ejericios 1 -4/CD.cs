@@ -17,7 +17,7 @@ namespace Practica3._1
         }
         public override string ToString()
         {
-            return $"{base.ToString()} \nTiempo de reproduccion: {Tiempo}";
+            return $"{base.ToString()} \nTiempo de reproduccion: {Tiempo} \nVentas mes 1: {this[0]} \nVentas mes 2: {this[1]} \nVentas mes 3: {this[2]}";
         }
     }
 }

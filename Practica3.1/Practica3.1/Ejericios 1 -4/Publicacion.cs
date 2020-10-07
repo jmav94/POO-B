@@ -24,7 +24,7 @@ namespace Practica3._1
         }
         public override string ToString()
         {
-            return $"Titulo: {Titulo} \nPrecio: {Precio} \nVentas mes 1: {this[0]} \nVentas mes 2: {this[1]} \nVentas mes 3: {this[2]}";
+            return $"Titulo: {Titulo} \nPrecio: {Precio}";
         }
         double[] ventas = new double[3];
         public double this[int intCelda]
