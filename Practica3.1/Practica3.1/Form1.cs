@@ -27,5 +27,16 @@ namespace Practica3._1
         {
             Close();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            frmEj5 frm = new frmEj5();
+            frm.Show();
+        }
     }
 }

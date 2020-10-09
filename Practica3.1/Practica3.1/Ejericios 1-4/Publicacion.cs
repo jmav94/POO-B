@@ -30,7 +30,7 @@ namespace Practica3._1
         public double this[int intCelda]
         {
             get { return ventas[intCelda]; }
-            set { ventas[intCelda] = value; }
+            set { ventas[intCelda] = value;}
         }
     }
 }

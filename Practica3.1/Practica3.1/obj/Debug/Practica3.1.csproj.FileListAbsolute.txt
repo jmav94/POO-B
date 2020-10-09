@@ -9,3 +9,4 @@ D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3.1.cspro
 D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3.1.csproj.CoreCompileInputs.cache
 D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3.1.exe
 D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3.1.pdb
+D:\dev\c#\windowsforms\POO-B\Practica3.1\Practica3.1\obj\Debug\Practica3._1.frmEj5.resources
