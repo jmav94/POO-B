@@ -1,0 +1,10 @@
+D:\dev\c#\windowsforms\POO-B\EjercicioVariosTodos\obj\Debug\EjercicioVariosTodos.csprojAssemblyReference.cache
+D:\dev\c#\windowsforms\POO-B\EjercicioVariosTodos\obj\Debug\EjercicioVariosTodos.Properties.Resources.resources
+D:\dev\c#\windowsforms\POO-B\EjercicioVariosTodos\obj\Debug\EjercicioVariosTodos.csproj.GenerateResource.cache
+D:\dev\c#\windowsforms\POO-B\EjercicioVariosTodos\obj\Debug\EjercicioVariosTodos.csproj.CoreCompileInputs.cache
+D:\dev\c#\windowsforms\POO-B\EjercicioVariosTodos\bin\Debug\EjercicioVariosTodos.exe.config
+D:\dev\c#\windowsforms\POO-B\EjercicioVariosTodos\bin\Debug\EjercicioVariosTodos.exe
+D:\dev\c#\windowsforms\POO-B\EjercicioVariosTodos\bin\Debug\EjercicioVariosTodos.pdb
+D:\dev\c#\windowsforms\POO-B\EjercicioVariosTodos\obj\Debug\EjercicioVariosTodos.exe
+D:\dev\c#\windowsforms\POO-B\EjercicioVariosTodos\obj\Debug\EjercicioVariosTodos.pdb
+D:\dev\c#\windowsforms\POO-B\EjercicioVariosTodos\obj\Debug\EjercicioVariosTodos.Form1.resources
