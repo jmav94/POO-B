@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.gbSucursal = new System.Windows.Forms.GroupBox();
-            this.gbEmpleado = new System.Windows.Forms.GroupBox();
-            this.txtNombreSucursal = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.txtSueldo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnCapturarSucursal = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtNombreSucursal = new System.Windows.Forms.TextBox();
+            this.gbEmpleado = new System.Windows.Forms.GroupBox();
             this.btnCapturarEmpleado = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSueldo = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.lbSucursales = new System.Windows.Forms.ListBox();
             this.dgEmpleados = new System.Windows.Forms.DataGridView();
             this.btnContarEmpleadosSucursal = new System.Windows.Forms.Button();
@@ -73,6 +73,48 @@
             this.gbSucursal.TabStop = false;
             this.gbSucursal.Text = "Datos de la Sucursal";
             // 
+            // btnCapturarSucursal
+            // 
+            this.btnCapturarSucursal.Location = new System.Drawing.Point(59, 93);
+            this.btnCapturarSucursal.Name = "btnCapturarSucursal";
+            this.btnCapturarSucursal.Size = new System.Drawing.Size(75, 23);
+            this.btnCapturarSucursal.TabIndex = 4;
+            this.btnCapturarSucursal.Text = "Capturar Sucursal";
+            this.btnCapturarSucursal.UseVisualStyleBackColor = true;
+            this.btnCapturarSucursal.Click += new System.EventHandler(this.btnCapturarSucursal_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Dirección: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Nombre: ";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(79, 49);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
+            this.txtDireccion.TabIndex = 1;
+            // 
+            // txtNombreSucursal
+            // 
+            this.txtNombreSucursal.Location = new System.Drawing.Point(82, 23);
+            this.txtNombreSucursal.Name = "txtNombreSucursal";
+            this.txtNombreSucursal.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreSucursal.TabIndex = 0;
+            // 
             // gbEmpleado
             // 
             this.gbEmpleado.Controls.Add(this.btnCapturarEmpleado);
@@ -89,96 +131,6 @@
             this.gbEmpleado.TabStop = false;
             this.gbEmpleado.Text = "Datos del Empleado";
             // 
-            // txtNombreSucursal
-            // 
-            this.txtNombreSucursal.Location = new System.Drawing.Point(82, 23);
-            this.txtNombreSucursal.Name = "txtNombreSucursal";
-            this.txtNombreSucursal.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreSucursal.TabIndex = 0;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(79, 49);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
-            this.txtDireccion.TabIndex = 1;
-            // 
-            // txtNombreEmpleado
-            // 
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(59, 55);
-            this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-            this.txtNombreEmpleado.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreEmpleado.TabIndex = 1;
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(59, 29);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(38, 20);
-            this.txtNumero.TabIndex = 2;
-            // 
-            // txtSueldo
-            // 
-            this.txtSueldo.Location = new System.Drawing.Point(59, 81);
-            this.txtSueldo.Name = "txtSueldo";
-            this.txtSueldo.Size = new System.Drawing.Size(61, 20);
-            this.txtSueldo.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nombre: ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Dirección: ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Numero:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 58);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Nombre: ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 84);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Sueldo:";
-            // 
-            // btnCapturarSucursal
-            // 
-            this.btnCapturarSucursal.Location = new System.Drawing.Point(59, 93);
-            this.btnCapturarSucursal.Name = "btnCapturarSucursal";
-            this.btnCapturarSucursal.Size = new System.Drawing.Size(75, 23);
-            this.btnCapturarSucursal.TabIndex = 4;
-            this.btnCapturarSucursal.Text = "Capturar Sucursal";
-            this.btnCapturarSucursal.UseVisualStyleBackColor = true;
-            this.btnCapturarSucursal.Click += new System.EventHandler(this.btnCapturarSucursal_Click);
-            // 
             // btnCapturarEmpleado
             // 
             this.btnCapturarEmpleado.Location = new System.Drawing.Point(45, 119);
@@ -189,6 +141,54 @@
             this.btnCapturarEmpleado.UseVisualStyleBackColor = true;
             this.btnCapturarEmpleado.Click += new System.EventHandler(this.btnCapturarEmpleado_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Sueldo:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Nombre: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Numero:";
+            // 
+            // txtSueldo
+            // 
+            this.txtSueldo.Location = new System.Drawing.Point(59, 81);
+            this.txtSueldo.Name = "txtSueldo";
+            this.txtSueldo.Size = new System.Drawing.Size(61, 20);
+            this.txtSueldo.TabIndex = 3;
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(59, 29);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(38, 20);
+            this.txtNumero.TabIndex = 2;
+            // 
+            // txtNombreEmpleado
+            // 
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(59, 55);
+            this.txtNombreEmpleado.Name = "txtNombreEmpleado";
+            this.txtNombreEmpleado.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreEmpleado.TabIndex = 1;
+            // 
             // lbSucursales
             // 
             this.lbSucursales.FormattingEnabled = true;
@@ -197,6 +197,7 @@
             this.lbSucursales.Size = new System.Drawing.Size(240, 121);
             this.lbSucursales.TabIndex = 7;
             this.lbSucursales.Click += new System.EventHandler(this.lbSucursales_Click);
+            this.lbSucursales.SelectedIndexChanged += new System.EventHandler(this.lbSucursales_SelectedIndexChanged);
             // 
             // dgEmpleados
             // 

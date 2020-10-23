@@ -44,8 +44,7 @@ namespace EjercicioVariosTodos
 
         private void btnCapturarEmpleado_Click(object sender, EventArgs e)
         {
-            Sucursal sucursalSelected = new Sucursal();
-            sucursalSelected = SeleccionarSucursal();
+            Sucursal sucursalSelected = SeleccionarSucursal();
 
             Empleado empleado = new Empleado();
             empleado.Numero = int.Parse(txtNumero.Text);
@@ -111,7 +110,7 @@ namespace EjercicioVariosTodos
 
 #if DatosPrueba
             const int intCantidadSucursales = 10;
-            const int intLongitudNombreSucursal = 25;
+            const int intLongitudNombreSucursal = 15;
             const int intLongitudDireccionSucursal = 25;
             for (int i = 1; i <= intCantidadSucursales; i++)
             {
@@ -128,7 +127,7 @@ namespace EjercicioVariosTodos
             const int intSueldoMaximo = 100000;
             foreach (Sucursal sucursal in lbSucursales.Items)
             {
-                for (int i = 1; i <= rndNumeroAleatorio.Next(intCantidadMaximaEmpleados); i++)
+                for (int i = 1; i <= rndNumeroAleatorio.Next(5,intCantidadMaximaEmpleados); i++)
                 {
                     Empleado miEmpleado = new Empleado();
                     miEmpleado.Numero = rndNumeroAleatorio.Next(intCantidadMaximaEmpleados);
@@ -145,8 +144,7 @@ namespace EjercicioVariosTodos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Sucursal sucursal = new Sucursal();
-            sucursal = SeleccionarSucursal();
+            Sucursal sucursal = SeleccionarSucursal();
             MessageBox.Show($"Los empleados de la sucursal {sucursal.Nombre} son: {sucursal.ContarEmpleados()}");
         }
 
@@ -168,6 +166,7 @@ namespace EjercicioVariosTodos
             foreach (Sucursal sucursal in lbSucursales.Items)
             {
                 sumaSuledos += sucursal.SumarSueldos();
+                //sumaSuledos = sumaSuledos + sucursal.SumarSueldos();
             }
             MessageBox.Show($"La suma de los sueldos de los empelados del corporativos es de: {sumaSuledos.ToString("C")}");
         }
@@ -185,8 +184,7 @@ namespace EjercicioVariosTodos
 
         private void btnSueldosSucursal_Click(object sender, EventArgs e)
         {
-            Sucursal sucursal = new Sucursal();
-            sucursal = SeleccionarSucursal();
+            Sucursal sucursal = SeleccionarSucursal();
             MessageBox.Show($"La suma de los sueldos de la sucursal {sucursal.Nombre} es: {sucursal.SumarSueldos().ToString("C")}");
         }
 
@@ -206,9 +204,10 @@ namespace EjercicioVariosTodos
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Sucursal sucursal = new Sucursal();
-            sucursal = SeleccionarSucursal();
+            Sucursal sucursal = SeleccionarSucursal();
+            Empleado miEmpleado = sucursal.CalcularEmpleadoMayor();
             MessageBox.Show($"El empleado con sueldo mayor de la sucursal {sucursal.Nombre} es: {sucursal.CalcularEmpleadoMayor().Nombre} y su sueldo es de: {sucursal.CalcularEmpleadoMayor().Sueldo.ToString("C")}");
+            
 
         }
 
@@ -262,6 +261,7 @@ namespace EjercicioVariosTodos
                     sueldoPromedioSucursal += empleado.Sueldo;
                 }
                 sueldoPromedioSucursal /= sucursal.ContarEmpleados();
+                //sueldoPromedioSucursal = sueldoPromedioSucursal  / sucursal.ContarEmpleados();
                 sueldosPromedioSucursales.Add(sueldoPromedioSucursal);
             }
             foreach (double sueldo in sueldosPromedioSucursales)
@@ -282,6 +282,11 @@ namespace EjercicioVariosTodos
             }
             promedioEmpleadosPorSucursal /= lbSucursales.Items.Count;
             MessageBox.Show($"El promedio de empleados por sucursal en el corporativo es de {promedioEmpleadosPorSucursal} empleados.");
+        }
+
+        private void lbSucursales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
