@@ -1,4 +1,5 @@
-﻿using System;
+﻿#define DatosPrueba
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,49 @@ namespace Practica_3._2
             dgEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgEmpleados.Columns["Sueldo"].DefaultCellStyle.Format = "C";
 
+#if DatosPrueba
+            // Constantes para datos de prueba
+            const int intCantidadDepartamentos = 10;
+            const int intLongitudNombreDepartamento = 15;
+            const int intLongitudNombreJefe = 25;
+            const int intCantidadMaximaEmpleados = 10;
+            const int intLongitudNombreEmpleado = 25;
+            const double dblSueldoMaximo = 100000;
+            Random rndNumeroAleatorio = new Random();
+
+            // crear empresa aleatoria
+            empresa = new Empresa();
+            empresa.RFC = Guid.NewGuid().ToString().Substring(0, intLongitudNombreDepartamento);
+            empresa.RazonSocial = Guid.NewGuid().ToString().Substring(0, intLongitudNombreDepartamento);
+            empresa.Gerente = Guid.NewGuid().ToString().Substring(0, intLongitudNombreJefe);
+
+            // ciclo para generar departamentos aleatorios
+            for (int i = 1; i <= intCantidadDepartamentos; i++)
+            {
+                Departamento departamento = new Departamento();
+                departamento.Numero = rndNumeroAleatorio.Next(intCantidadDepartamentos + 1);
+                departamento.Nombre = Guid.NewGuid().ToString().Substring(0, intLongitudNombreDepartamento);
+                departamento.Jefe = Guid.NewGuid().ToString().Substring(0, intLongitudNombreJefe);
+                empresa.InsertarDepartamento(departamento);
+            }
+            
+
+            // ciclo para crear empleados aleatorios
+            foreach (Departamento departamento in empresa)
+            {
+                for (int i = 1; i <= intCantidadMaximaEmpleados; i++)
+                {
+                    Empleado empleado = new Empleado();
+                    empleado.Numero = rndNumeroAleatorio.Next(intCantidadMaximaEmpleados + 1);
+                    empleado.Nombre = Guid.NewGuid().ToString().Substring(0, intLongitudNombreEmpleado);
+                    empleado.Sueldo = rndNumeroAleatorio.NextDouble() * dblSueldoMaximo;
+                    departamento.InsertarEmpleado(empleado);
+                }
+            }
+            MostrarDepartamentos();
+
+#endif
+
         }
 
         private void btnCapturarEmpresa_Click(object sender, EventArgs e)
@@ -80,7 +124,6 @@ namespace Practica_3._2
             MessageBox.Show("Departamento insertado correctemente", "Captura Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             MostrarDepartamentos();
             Limpiar();
-
         }
         public void Limpiar()
         {
@@ -96,6 +139,13 @@ namespace Practica_3._2
                 if (control1 is TextBox)
                 {
                     control1.Text = "";
+                }
+            }
+            foreach (Control control2 in gbEmpleados.Controls)
+            {
+                if (control2 is TextBox)
+                {
+                    control2.Text = "";
                 }
             }
         }
@@ -139,15 +189,7 @@ namespace Practica_3._2
             MessageBox.Show("Empleado insertado correctemente", "Captura Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             MostrarEmpleados(departamentoSelected);
-
-            foreach (Control control in gbEmpleados.Controls)
-            {
-                if (control is TextBox)
-                {
-                    control.Text = "";
-                }
-            }
-
+            Limpiar();
         }
         void MostrarEmpleados(Departamento departamento)
         {
@@ -198,6 +240,11 @@ namespace Practica_3._2
             currentRow = dgDepartamentos.CurrentRow;
             Departamento departamento = SeleccionarDepartamento();
             departamento.EliminarEmpleado(currentRow.Index);
+            MostrarEmpleados(departamento);
+            if (dgEmpleados.Rows is null)
+            {
+                departamento = null;
+            }
         }
     }
 }

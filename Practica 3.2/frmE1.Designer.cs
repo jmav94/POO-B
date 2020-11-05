@@ -66,7 +66,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(399, 415);
+            this.btnSalir.Location = new System.Drawing.Point(800, 316);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 0;
@@ -339,7 +339,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 450);
+            this.ClientSize = new System.Drawing.Size(903, 363);
             this.Controls.Add(this.gbEmpleados);
             this.Controls.Add(this.btnElminarEmpleado);
             this.Controls.Add(this.dgEmpleados);
