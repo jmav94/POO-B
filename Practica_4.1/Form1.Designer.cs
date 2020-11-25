@@ -32,6 +32,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnEj4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEjemplo
@@ -74,11 +75,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // btnEj4
+            // 
+            this.btnEj4.Location = new System.Drawing.Point(350, 12);
+            this.btnEj4.Name = "btnEj4";
+            this.btnEj4.Size = new System.Drawing.Size(73, 38);
+            this.btnEj4.TabIndex = 4;
+            this.btnEj4.Text = "Ejercicio 4";
+            this.btnEj4.UseVisualStyleBackColor = true;
+            this.btnEj4.Click += new System.EventHandler(this.btnEj4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEj4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalir);
@@ -95,6 +107,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEj4;
     }
 }
 

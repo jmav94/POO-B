@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AFD70E72-C8A7-45BF-B702-72EFBB8352D1}</ProjectGuid>
+    <ProjectGuid>{7D4D2547-31F7-4955-93FD-FD9894F4CE11}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Practica_4._1</RootNamespace>
-    <AssemblyName>Practica_4.1</AssemblyName>
+    <RootNamespace>Practica_5._1</RootNamespace>
+    <AssemblyName>Practica_5.1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,60 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Ahorros.cs" />
-    <Compile Include="Clases\Cheques.cs" />
-    <Compile Include="Clases\Circunferencia.cs" />
-    <Compile Include="Clases\Cuenta.cs" />
-    <Compile Include="Clases\Empleado.cs" />
-    <Compile Include="Clases\Figura.cs" />
-    <Compile Include="Clases\Rectangulo.cs" />
-    <Compile Include="Clases\Triangulo.cs" />
+    <Compile Include="Cita.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm1.Designer.cs">
-      <DependentUpon>Frm1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm4.Designer.cs">
-      <DependentUpon>frm4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmEjemplo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmEjemplo.Designer.cs">
-      <DependentUpon>FrmEjemplo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmEjemploAbtractos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmEjemploAbtractos.Designer.cs">
-      <DependentUpon>FrmEjemploAbtractos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm1.resx">
-      <DependentUpon>Frm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm4.resx">
-      <DependentUpon>frm4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEjemplo.resx">
-      <DependentUpon>FrmEjemplo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEjemploAbtractos.resx">
-      <DependentUpon>FrmEjemploAbtractos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -122,9 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

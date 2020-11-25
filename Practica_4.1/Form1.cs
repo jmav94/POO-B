@@ -39,5 +39,11 @@ namespace Practica_4._1
             Frm1 form = new Frm1();
             form.Show();
         }
+
+        private void btnEj4_Click(object sender, EventArgs e)
+        {
+            frm4 form = new frm4();
+            form.Show();
+        }
     }
 }
