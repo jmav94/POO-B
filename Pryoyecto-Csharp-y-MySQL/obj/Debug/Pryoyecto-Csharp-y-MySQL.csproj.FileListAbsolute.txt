@@ -23,3 +23,4 @@ D:\dev\c#\windowsforms\POO-B\Pryoyecto-Csharp-y-MySQL\obj\Debug\Pryoyecto-Csharp
 D:\dev\c#\windowsforms\POO-B\Pryoyecto-Csharp-y-MySQL\obj\Debug\Pryoyecto-Csharp-y-MySQL.csproj.CopyComplete
 D:\dev\c#\windowsforms\POO-B\Pryoyecto-Csharp-y-MySQL\obj\Debug\Pryoyecto-Csharp-y-MySQL.exe
 D:\dev\c#\windowsforms\POO-B\Pryoyecto-Csharp-y-MySQL\obj\Debug\Pryoyecto-Csharp-y-MySQL.pdb
+D:\dev\c#\windowsforms\POO-B\Pryoyecto-Csharp-y-MySQL\obj\Debug\Pryoyecto_Csharp_y_MySQL.FormId.resources

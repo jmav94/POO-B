@@ -141,10 +141,10 @@ namespace Pryoyecto_Csharp_y_MySQL
                         Console.WriteLine($"{myReader.GetString(0)} - {myReader.GetString(1)} - {myReader.GetString(2)} - {myReader.GetString(3)}");*/
                         
                         // Insertar objeto al listbox
-                        lbUsuarios.Items.Add($"{user.Id} - {user.First_Name} - {user.First_Name} - {user.Last_Name} - {user.Address}");
+                        lbUsuarios.Items.Add($"{user.Id} - {user.First_Name} - {user.Last_Name} - {user.Address}");
 
                         // Creacion de arreglo con strings con los datos del objeto
-                        string[] row = { user.Id.ToString(), user.First_Name, user.First_Name, user.Last_Name, user.Address };
+                        string[] row = { user.Id.ToString(), user.First_Name, user.Last_Name, user.Address };
                         // Creacion de objeto de tipo ListViewItem
                         var listViewItem = new ListViewItem(row);
                         // Insercion de Item al control ListiView
@@ -162,10 +162,44 @@ namespace Pryoyecto_Csharp_y_MySQL
                 MessageBox.Show(ex.Message);
             }
         }
+
+        /*private void UpdateUser(User user)
+        {
+            string query = $"UPDATE `user` SET `first_name`= '{user.First_Name}',`last_name`= '{user.Last_Name}',`address`= '{user.Address}' WHERE id {user.Id}";
+        }*/
+        private void UpdateUser(User user)
+        {
+            string query = $"UPDATE `user` SET `first_name`= '{user.First_Name}',`last_name`= '{user.Last_Name}',`address`= '{user.Address}' WHERE `id` = '{txtId.Text}'";
+
+            commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+
+            try
+            {
+                databaseConnection.Open();
+                myReader = commandDatabase.ExecuteReader();
+                // Actualizado satisfactoriamente
+                databaseConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            // Registrar
-            SaveUser();
+            if (dgUsers.SelectedRows.Count>0)
+            {
+                // actualizar
+
+
+            }
+            else
+            {   // Registrar
+                SaveUser();
+            }
+            
+            
             // Listar
             ListUsers();
         }
@@ -174,5 +208,12 @@ namespace Pryoyecto_Csharp_y_MySQL
         {
             ListUsers();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            User user = new User(txtFirstName.Text,txtLastName.Text,txtAdress.Text);
+            UpdateUser(user);
+        }
     }
+    
 }

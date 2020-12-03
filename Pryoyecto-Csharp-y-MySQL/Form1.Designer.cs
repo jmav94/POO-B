@@ -44,12 +44,20 @@
             this.lastname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dgUsers = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatos
             // 
+            this.gbDatos.Controls.Add(this.label4);
+            this.gbDatos.Controls.Add(this.txtId);
+            this.gbDatos.Controls.Add(this.btnUpdate);
+            this.gbDatos.Controls.Add(this.btnDelete);
             this.gbDatos.Controls.Add(this.btnUpdateList);
             this.gbDatos.Controls.Add(this.btnRegister);
             this.gbDatos.Controls.Add(this.label3);
@@ -60,16 +68,16 @@
             this.gbDatos.Controls.Add(this.txtFirstName);
             this.gbDatos.Location = new System.Drawing.Point(12, 12);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(198, 202);
+            this.gbDatos.Size = new System.Drawing.Size(198, 256);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos";
             // 
             // btnUpdateList
             // 
-            this.btnUpdateList.Location = new System.Drawing.Point(87, 164);
+            this.btnUpdateList.Location = new System.Drawing.Point(103, 164);
             this.btnUpdateList.Name = "btnUpdateList";
-            this.btnUpdateList.Size = new System.Drawing.Size(105, 23);
+            this.btnUpdateList.Size = new System.Drawing.Size(89, 47);
             this.btnUpdateList.TabIndex = 7;
             this.btnUpdateList.Text = "Update User List";
             this.btnUpdateList.UseVisualStyleBackColor = true;
@@ -79,9 +87,9 @@
             // 
             this.btnRegister.Location = new System.Drawing.Point(6, 164);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(75, 23);
+            this.btnRegister.Size = new System.Drawing.Size(75, 47);
             this.btnRegister.TabIndex = 6;
-            this.btnRegister.Text = "Register User";
+            this.btnRegister.Text = "Register / Update User";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
@@ -138,7 +146,7 @@
             this.lbUsuarios.FormattingEnabled = true;
             this.lbUsuarios.Location = new System.Drawing.Point(216, 12);
             this.lbUsuarios.Name = "lbUsuarios";
-            this.lbUsuarios.Size = new System.Drawing.Size(253, 199);
+            this.lbUsuarios.Size = new System.Drawing.Size(208, 251);
             this.lbUsuarios.TabIndex = 1;
             // 
             // listView1
@@ -149,9 +157,9 @@
             this.lastname,
             this.address});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(475, 12);
+            this.listView1.Location = new System.Drawing.Point(430, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(250, 199);
+            this.listView1.Size = new System.Drawing.Size(262, 251);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -175,16 +183,51 @@
             // dgUsers
             // 
             this.dgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUsers.Location = new System.Drawing.Point(731, 12);
+            this.dgUsers.Location = new System.Drawing.Point(698, 12);
             this.dgUsers.Name = "dgUsers";
-            this.dgUsers.Size = new System.Drawing.Size(290, 199);
+            this.dgUsers.Size = new System.Drawing.Size(323, 251);
             this.dgUsers.TabIndex = 3;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(103, 217);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(89, 26);
+            this.btnDelete.TabIndex = 8;
+            this.btnDelete.Text = "Delete User ";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(6, 217);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(89, 26);
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "Update User ";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(142, 36);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(50, 20);
+            this.txtId.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(150, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "id";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 232);
+            this.ClientSize = new System.Drawing.Size(1045, 279);
             this.Controls.Add(this.dgUsers);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.lbUsuarios);
@@ -217,6 +260,10 @@
         private System.Windows.Forms.ColumnHeader lastname;
         private System.Windows.Forms.ColumnHeader address;
         private System.Windows.Forms.DataGridView dgUsers;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
 
