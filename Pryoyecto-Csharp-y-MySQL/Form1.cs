@@ -167,6 +167,8 @@ namespace Pryoyecto_Csharp_y_MySQL
         {
             string query = $"UPDATE `user` SET `first_name`= '{user.First_Name}',`last_name`= '{user.Last_Name}',`address`= '{user.Address}' WHERE id {user.Id}";
         }*/
+        
+        // Actualizar usuario en base a campo Id
         private void UpdateUser(User user)
         {
             string query = $"UPDATE `user` SET `first_name`= '{user.First_Name}',`last_name`= '{user.Last_Name}',`address`= '{user.Address}' WHERE `id` = '{txtId.Text}'";
@@ -179,6 +181,7 @@ namespace Pryoyecto_Csharp_y_MySQL
                 databaseConnection.Open();
                 myReader = commandDatabase.ExecuteReader();
                 // Actualizado satisfactoriamente
+                MessageBox.Show("Usuario actualizado correctamente");
                 databaseConnection.Close();
             }
             catch (Exception ex)
@@ -213,6 +216,30 @@ namespace Pryoyecto_Csharp_y_MySQL
         {
             User user = new User(txtFirstName.Text,txtLastName.Text,txtAdress.Text);
             UpdateUser(user);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Delete(int.Parse(txtId.Text));
+        }
+        private void Delete(int id)
+        {
+            string query = $"DELETE FROM `user` WHERE id = {id}";
+            commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+
+            try
+            {
+                databaseConnection.Open();
+                myReader = commandDatabase.ExecuteReader();
+                // Eliminado satisfactoriamente
+                MessageBox.Show("Eliminado satisfactoriamente");
+                databaseConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
     
