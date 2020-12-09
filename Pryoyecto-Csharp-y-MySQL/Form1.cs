@@ -21,6 +21,8 @@ namespace Pryoyecto_Csharp_y_MySQL
         static MySqlCommand commandDatabase;
         // Declaracion del ejecutor del query
         static MySqlDataReader myReader;
+
+        DataGridViewRow currentRow;
         public Form1()
         {
             InitializeComponent();
@@ -38,6 +40,7 @@ namespace Pryoyecto_Csharp_y_MySQL
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            /*
             // Verificacion de conexion a la bd
             try
             {
@@ -52,7 +55,7 @@ namespace Pryoyecto_Csharp_y_MySQL
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
 
             // Cantidad, nombre y encabezado de las columnas del dg + configuracion de tamaño automatico de los renglones
             dgUsers.ColumnCount = 4;
@@ -237,6 +240,116 @@ namespace Pryoyecto_Csharp_y_MySQL
         private void gbDatos_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void btnUploadImage_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.InitialDirectory = "C://Desktop";
+            openFileDialog1.Title = "Select image to be upload";
+            openFileDialog1.Filter = "Image Only(*.jpg;,*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+            openFileDialog1.FilterIndex = 1;
+            try
+            {
+                if(openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    if (openFileDialog1.CheckFileExists)
+                    {
+                        string path = System.IO.Path.GetFullPath(openFileDialog1.FileName);
+                        label5.Text = path;
+                        pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
+                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                        string query = $"UPDATE `user` SET `image`= '{path}'WHERE `id` = '{txtId.Text}'";
+
+                        commandDatabase = new MySqlCommand(query, databaseConnection);
+                        commandDatabase.CommandTimeout = 60;
+
+                        databaseConnection.Open();
+                        commandDatabase.ExecuteReader();
+                        
+                        MessageBox.Show("Imagen cargada correctamente");
+                        databaseConnection.Close();
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please upload an image.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = null;
+            int id =  (int) dgUsers.CurrentRow.Cells[0].Value;
+            string query = $"SELECT `image` FROM `user` WHERE id = {id}";
+            commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            try
+            {
+                // Establecer conexion conn bd
+                databaseConnection.Open();
+                // Ejecutar query y guardar el resultado en myReader
+                myReader = commandDatabase.ExecuteReader();
+                if (myReader.HasRows)
+                {
+                    while (myReader.Read())
+                    {
+
+                        pictureBox1.Image = Image.FromFile(myReader["image"].ToString());
+                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                }
+                databaseConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                pictureBox1.Image = null;
+                databaseConnection.Close();
+            }
+        }
+
+        private void dgUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            pictureBox1.Image = null;
+            int id = (int)dgUsers.CurrentRow.Cells[0].Value;
+            string query = $"SELECT `image` FROM `user` WHERE id = {id}";
+            commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            try
+            {
+                // Establecer conexion conn bd
+                databaseConnection.Open();
+                // Ejecutar query y guardar el resultado en myReader
+                myReader = commandDatabase.ExecuteReader();
+                if (myReader.HasRows)
+                {
+                    while (myReader.Read())
+                    {
+
+                        pictureBox1.Image = Image.FromFile(myReader["image"].ToString());
+                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                }
+                databaseConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                pictureBox1.Image = null;
+                databaseConnection.Close();
+            }
         }
     }
     

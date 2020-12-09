@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.gbDatos = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdateList = new System.Windows.Forms.Button();
@@ -41,6 +39,8 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.lbUsuarios = new System.Windows.Forms.ListBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -49,8 +49,13 @@
             this.address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dgUsers = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnUploadImage = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatos
@@ -72,22 +77,6 @@
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos";
             this.gbDatos.Enter += new System.EventHandler(this.gbDatos_Enter);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(708, 251);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "id";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(729, 248);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(50, 20);
-            this.txtId.TabIndex = 10;
             // 
             // btnUpdate
             // 
@@ -177,6 +166,22 @@
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtFirstName.TabIndex = 0;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(708, 251);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "id";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(729, 248);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(50, 20);
+            this.txtId.TabIndex = 10;
+            // 
             // lbUsuarios
             // 
             this.lbUsuarios.FormattingEnabled = true;
@@ -223,6 +228,7 @@
             this.dgUsers.Name = "dgUsers";
             this.dgUsers.Size = new System.Drawing.Size(323, 211);
             this.dgUsers.TabIndex = 3;
+            this.dgUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUsers_CellContentClick);
             // 
             // button1
             // 
@@ -233,11 +239,47 @@
             this.button1.Text = "Delete User ";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(449, 403);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Image";
+            // 
+            // btnUploadImage
+            // 
+            this.btnUploadImage.Location = new System.Drawing.Point(415, 419);
+            this.btnUploadImage.Name = "btnUploadImage";
+            this.btnUploadImage.Size = new System.Drawing.Size(102, 31);
+            this.btnUploadImage.TabIndex = 10;
+            this.btnUploadImage.Text = "Upload Image";
+            this.btnUploadImage.UseVisualStyleBackColor = true;
+            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(417, 294);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 106);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 279);
+            this.ClientSize = new System.Drawing.Size(1045, 476);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnUploadImage);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtId);
@@ -251,6 +293,7 @@
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,6 +322,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnUploadImage;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
