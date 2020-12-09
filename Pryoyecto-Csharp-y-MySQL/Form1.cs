@@ -147,6 +147,8 @@ namespace Pryoyecto_Csharp_y_MySQL
                         string[] row = { user.Id.ToString(), user.First_Name, user.Last_Name, user.Address };
                         // Creacion de objeto de tipo ListViewItem
                         var listViewItem = new ListViewItem(row);
+                        //ListViewItem listViewItem = new ListViewItem(row);
+                        
                         // Insercion de Item al control ListiView
                         listView1.Items.Add(listViewItem);
 
@@ -179,7 +181,7 @@ namespace Pryoyecto_Csharp_y_MySQL
             try
             {
                 databaseConnection.Open();
-                myReader = commandDatabase.ExecuteReader();
+                commandDatabase.ExecuteReader();
                 // Actualizado satisfactoriamente
                 MessageBox.Show("Usuario actualizado correctamente");
                 databaseConnection.Close();
@@ -191,18 +193,8 @@ namespace Pryoyecto_Csharp_y_MySQL
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (dgUsers.SelectedRows.Count>0)
-            {
-                // actualizar
-
-
-            }
-            else
-            {   // Registrar
-                SaveUser();
-            }
-            
-            
+            // Registrar
+            SaveUser();
             // Listar
             ListUsers();
         }
@@ -231,7 +223,7 @@ namespace Pryoyecto_Csharp_y_MySQL
             try
             {
                 databaseConnection.Open();
-                myReader = commandDatabase.ExecuteReader();
+                commandDatabase.ExecuteReader();
                 // Eliminado satisfactoriamente
                 MessageBox.Show("Eliminado satisfactoriamente");
                 databaseConnection.Close();
@@ -240,6 +232,11 @@ namespace Pryoyecto_Csharp_y_MySQL
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void gbDatos_Enter(object sender, EventArgs e)
+        {
+
         }
     }
     
