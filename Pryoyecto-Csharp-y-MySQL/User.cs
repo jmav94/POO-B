@@ -57,5 +57,13 @@ namespace Pryoyecto_Csharp_y_MySQL
             get { return address; }
             set { address = value; }
         }
+        private string image_Path;
+
+        public string Impage_Path
+        {
+            get { return image_Path; }
+            set { image_Path = value; }
+        }
+
     }
 }
